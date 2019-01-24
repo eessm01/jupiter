@@ -34,7 +34,6 @@ body {
   background-image: url(../img/jupiter.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  /* box-shadow: 25px 25px 25px 25px rgba(0,0,0,.5) inset; */
 }
 @keyframes translation {
   0% {
