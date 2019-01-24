@@ -1,0 +1,70 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: -webkit-radial-gradient(#578bad,#1f5561,#0c3b58);
+}
+.container {
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid red; */
+  perspective: 500px;
+} 
+.sun {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0 0 32px 32px rgba(221, 231, 128, 0.3);
+  background: -webkit-radial-gradient(#e5f58c,#d8b209,#ca2f13);
+}
+.jupiter {
+  width: 150px;
+  height: 150px;
+  background: orange;
+  border-radius: 50%;
+  animation: translation 6s infinite linear forwards;
+  transform: rotate3D(45deg);
+  background-image: url(../img/jupiter.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* box-shadow: 25px 25px 25px 25px rgba(0,0,0,.5) inset; */
+}
+@keyframes translation {
+  0% {
+    transform: rotate(0deg)
+               translate(-380px)
+               rotate(0deg)
+               scale(1.8);
+    box-shadow: 25px 25px 25px 25px rgba(0,0,0,.5) inset;
+    background-position: right center;
+  }
+  25% {
+    transform: rotate(90deg)
+               translate(-380px)
+               rotate(-90deg)
+               scale(.5);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1) inset;
+  }
+  75% {
+    transform: rotate(270deg)
+               translate(-380px)
+               rotate(-270deg)
+               scale(3.5);
+    box-shadow: 75px 75px 75px 75px rgba(0,0,0,.8) inset;
+  }
+  100% {
+    transform: rotate(360deg)
+               translate(-380px)
+               rotate(-360deg)
+               scale(1.8);
+    box-shadow: 25px 25px 25px 25px rgba(0,0,0,.5) inset;
+    background-position: 3px center;
+  }
+} 
